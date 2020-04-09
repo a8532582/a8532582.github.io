@@ -349,8 +349,9 @@
   }
 
   body{
-    min-height: 150vh;
+    /* min-height: 200vh; */
       font-family: '微軟正黑體';
+      margin-bottom:20vh ;
   }
   a{
     text-decoration: none;
@@ -402,10 +403,10 @@
       object-fit: cover;
 }
 
-.img-area a img{
 
-  width: 200px;
-  /* height: 200px; */
+
+.login-text{
+  padding: 10px;
 
 }
 
