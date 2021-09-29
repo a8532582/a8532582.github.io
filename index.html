@@ -130,6 +130,7 @@
         let registerup = document.getElementById("registerup");
         let registerpop = document.getElementById("registerpop");
         let registertDiv = document.getElementById("register_area");
+        let eventEnable = false;
 
         const popMethod = (tag) => {
             switch (tag) {
@@ -161,10 +162,14 @@
             }
         }
         eventDiv.addEventListener("mouseover", () => {
-            popMethod("event");
+            if (eventEnable === true) {
+                popMethod("event");
+            }
         })
         eventDiv.addEventListener("mouseout", () => {
-            upMethod("event");
+            if (eventEnable === true) {
+                upMethod("event");
+            }
         })
         registertDiv.addEventListener("mouseover", () => {
             popMethod("register");
