@@ -94,11 +94,10 @@
             <img src="./assets/images/ARG-一頁式網頁_背景5.jpg" alt="">
         </div>
         <div class="btn1_area" id="register_area">
-            <a href="https://forms.gle/jWVnYvUXNwYAMUzz6" target="_blank" rel="noreferrer noopener">
+            <!-- <a href="https://forms.gle/jWVnYvUXNwYAMUzz6" target="_blank" rel="noreferrer noopener">
                 <img id="registerup" class="btn1-1" src="./assets/images/ARG-一頁式網頁_報名.jpg" alt="">
                 <img id="registerpop" class="btn1-2" src="./assets/images/ARG-一頁式網頁_報名2.jpg" alt="">
-            </a>
-
+            </a> -->
             <!-- <div id="hover_btn1" class="hover_btn1"></div> -->
         </div>
         <div>
@@ -127,15 +126,29 @@
     <script src="assets/js/imagesloaded.js"></script>
     <script src="assets/js/templatemo-custom.js"></script>
     <script>
+
         let eventup = document.getElementById("eventup");
         let eventpop = document.getElementById("eventpop");
         let eventDiv = document.getElementById("active_area");
-        let registerup = document.getElementById("registerup");
-        let registerpop = document.getElementById("registerpop");
         let registertDiv = document.getElementById("register_area");
         let eventEnable = false;
+        let regestEnable = false;
+        //regest Refactor TODO
+        const regestEnableFunc = (regestEnable) => {
+            if (regestEnable) {
+                registertDiv.innerHTML = `<a href="https://forms.gle/jWVnYvUXNwYAMUzz6" target="_blank" rel="noreferrer noopener">
+                <img id="registerup" class="btn1-1" src="./assets/images/ARG-一頁式網頁_報名.jpg" alt="">
+                <img id="registerpop" class="btn1-2" src="./assets/images/ARG-一頁式網頁_報名2.jpg" alt="">
+            </a>`
+            } else {
+                registertDiv.innerHTML = `<img id="registerup" class="btn1-1" src="./assets/images/ARG-一頁式網頁_未報名.jpg" alt="">
+            <img id="registerpop" class="btn1-2" src="./assets/images/ARG-一頁式網頁_未報名2.jpg" alt="">`
+            }
 
+        }
         const popMethod = (tag) => {
+            let registerup = document.getElementById("registerup");
+            let registerpop = document.getElementById("registerpop");
             switch (tag) {
                 case "event":
                     eventup.setAttribute("style", "display: none");
@@ -151,6 +164,8 @@
         }
 
         const upMethod = (tag) => {
+            let registerup = document.getElementById("registerup");
+            let registerpop = document.getElementById("registerpop");
             switch (tag) {
                 case "event":
                     eventpop.setAttribute("style", "display: none");
@@ -164,6 +179,9 @@
                     break;
             }
         }
+        regestEnableFunc(regestEnable)
+
+
         eventDiv.addEventListener("mouseover", () => {
             if (eventEnable === true) {
                 popMethod("event");
