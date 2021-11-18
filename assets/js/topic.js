@@ -19,7 +19,6 @@ async function clickAns(target) {
     let ansCheck = false;
     let jsonData = await fetchJSON();
     let ansInput = quest.value;
-    console.log(jsonData);
     if (jsonData[target].ans === ansInput) {
         ansCheck = true
         localStorage.setItem(quest.id, ansCheck);
@@ -84,12 +83,22 @@ async function getRuneMethod(ansCheck, questInput, questNum) {
             downloadRune.style.width = "34%"
             downloadRune.style.position = "relative"
             downloadRune.style.zIndex = "2";
+            downloadRune.onclick = function () {
+                window.open(`${targetUrl}/${questInput.id}-rune.png`)
+            }
             inputBlock.appendChild(nextButton)
             inputBlock.appendChild(downloadRune)
         } else {
             let downloadRune = document.createElement("input");
             downloadRune.src = "../assets/images/topicImg/common/收集符文(按下前).png"
             downloadRune.type = "image";
+
+            downloadRune.onmouseover = function(){
+                downloadRune.src = "../assets/images/topicImg/common/收集符文(按下後).png"
+            }
+            downloadRune.onmouseout = function(){
+                downloadRune.src = "../assets/images/topicImg/common/收集符文(按下前).png"
+            }
             downloadRune.style.width = "34%"
             downloadRune.style.position = "relative"
             downloadRune.style.zIndex = "2";
