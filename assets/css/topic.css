@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+html { line-height: 1.15; /* Correct the line height in all browsers */ 
+    -webkit-text-size-adjust: 100%; /* Prevent adjustments of font size after orientation changes in iOS. */ 
+}
+
+a { 
+    background-color: transparent; /* Remove the gray background on active links in IE 10. */ 
+}
+
+img { 
+    border-style: none; /* Remove the border on images inside links in IE 10. */ 
+    display: block;
+}
+
+.questDiv{
+    display:none;
+}
+body { 
+    margin: 0; 
+}
+.ansinput {
+    position: relative;
+    width: 30%;
+    left: 12%;
+}
+.background {
+    z-index: 1;
+    position: absolute;
+}
+
+.quest {
+    position: relative;
+    /* margin:0 0 0 33%; */
+    z-index: 2;
+    width: 50%;
+    border: none;
+    display: inline-block;
+    padding: 20px 0;
+}
+.send {
+    z-index: 2;
+    position: relative;
+    width: 32%;
+    margin: 0 10% 0 0;
+}
+.ansimg{
+    position: relative;
+    z-index: 2;
+    width: 33%;
+    /* padding-left: 3%; */
+    display: inline-block;
+}
+
+.inputDiv{
+    display: flex;
+    margin: 0 0 0 12%;
+}
