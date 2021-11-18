@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <title>題目C</title>
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" href="../assets/images/CYUTlogo.jpg" type="image/jpg">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="../assets/css/fontawesome.css">
+    <link rel="stylesheet" href="../assets/css/templatemo-space-dynamic.css">
+    <link rel="stylesheet" href="../assets/css/animated.css">
+    <link rel="stylesheet" href="../assets/css/owl.css">
+    <link rel="stylesheet" href="../assets/css/topic.css">
+</head>
+
+<body>
+    <div id='quest1block'>
+        <div>
+            <img id="questImg1" src="../assets/images/topicImg/groupc/quest1.jpg" alt="" />
+            <img id="questrune1" />
+        </div>
+        <div class="inputBlock" id="inputBlock1">
+            <img class="background" id="background1" src="../assets/images/topicImg/common/純色背景.jpg" alt="">
+            <div class="inputDiv">
+                <img class="ansimg" src="../assets/images/topicImg/common/輸入答案_1.png" alt="">
+                <input class="quest" id="quest1">
+                <input class="send" type="image" src="../assets/images/topicImg/common/送出(按下前).png"
+                    onclick="clickAns('quest1')"
+                    onmouseover="this.src='../assets/images/topicImg/common/送出(按下後).png'" 
+                    onmouseout="this.src='../assets/images/topicImg/common/送出(按下前).png'" /> 
+            </div>
+        </div>
+
+    </div>
+
+    <div class="questDiv" id='quest2block'>
+        <div>
+            <img id="questImg2" src="../assets/images/topicImg/groupc/quest1.jpg" alt="" />
+            <img id="questrune2" />
+        </div>
+        <div class="inputBlock" id="inputBlock2">
+            <img class="background" id="background2" src="../assets/images/topicImg/common/純色背景.jpg" alt="">
+            <div class="inputDiv">
+                <img class="ansimg" src="../assets/images/topicImg/common/輸入答案_1.png" alt="">
+                <input class="quest" id="quest2">
+                <input class="send" type="image" src="../assets/images/topicImg/common/送出(按下前).png"
+                    onclick="clickAns('quest2')"
+                    onmouseover="this.src='../assets/images/topicImg/common/送出(按下後).png'" 
+                    onmouseout="this.src='../assets/images/topicImg/common/送出(按下前).png'" /> 
+            </div>
+        </div>
+    </div>
+
+    <div class="questDiv" id='quest3block'>
+        <div>
+            <img id="questImg3" src="../assets/images/topicImg/groupc/quest1.jpg" alt="" />
+            <img id="questrune3" />
+        </div>
+        <div class="inputBlock" id="inputBlock3">
+            <img class="background" id="background3" src="../assets/images/topicImg/common/純色背景.jpg" alt="">
+            <div class="inputDiv">
+                <img class="ansimg" src="../assets/images/topicImg/common/輸入答案_1.png" alt="">
+                <input class="quest" id="quest3">
+                <input class="send" type="image" src="../assets/images/topicImg/common/送出(按下前).png"
+                    onclick="clickAns('quest3')"
+                    onmouseover="this.src='../assets/images/topicImg/common/送出(按下後).png'"
+                    onmouseout="this.src='../assets/images/topicImg/common/送出(按下前).png'" /> 
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let targetFolder = 'groupc'
+        let loadJsonName = 'c.json';
+    </script>
+    <script src="../assets/js/topic.js"></script>
+</body>
+
+</html>
