@@ -29,14 +29,16 @@ body {
     position: absolute;
 }
 .queststring{
-    font-size: 15pt;
+    font-size: 2vmin;
+    line-height: 2vmin;
     font-family:"微軟正黑體";
     font-weight:bold;
     position: absolute;
     padding: 14%;
 }
 .nextStageMsg{
-    font-size: 15pt;
+    font-size: 2vmin;
+    line-height: 2vmin;
     font-family:"微軟正黑體";
     font-weight:bold;
     color: red;
