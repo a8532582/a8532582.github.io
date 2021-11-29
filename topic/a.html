@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
-    <title>題目Ａ</title>
+    <title>題目A</title>
     <!-- Favicon Icon -->
     <link rel="shortcut icon" href="../assets/images/CYUTlogo.jpg" type="image/jpg">
     <!-- Bootstrap core CSS -->
@@ -26,64 +26,118 @@
 </head>
 
 <body>
-    <div id='quest1block'>
+
+    <div id='startDiv'>
         <div>
-            <img id="questImg1" src="../assets/images/topicImg/groupa/quest1.jpg" alt="" />
+            <img class="startbg" id="startblack" src="../assets/images/topicImg/common/ARG-題目背景1920X1080.jpg"
+                style="position:absolute" alt="" />
+            <div id="startGroup">
+                <p class="queststring">
+                    §–系統公告：Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit…<br>
+                    Nulla vitae arcu dapibus, porta eros nec<br> aliquet ex…<br>
+                    Donec sagittis sem mollis erat suscipit, sit<br> amet consectetur urna volutpat…<br>
+                    Integer at tellus tempus, eleifend felis ac,<br> fringilla quam…<br>
+                    Pellentesque vestibulum massa eu ex<br> molestie, at tristique dolor convallis…<br>
+                    <br>
+                    §–系統公告：試煉者成功進入第二階段<br>
+                    §–權限等級：ARG<br>
+                    請領取符文<br>
+                    <span style="color: red;">下一試煉彩虹的秘辛</span>
+                </p>
+            </div>
+            <img class="startrune" src="../assets/images/topicImg/common/團結.png" />
+        </div>
+
+        <div class="inputBlock" id="startinputBlock">
+            <img class="background" id="startBackGround" src="../assets/images/topicImg/common/符文專用的純色背景.jpg" alt=""
+                style="padding-top: 4%;">
+
+            <input src="../assets/images/topicImg/common/下一題按鈕(按下前).png" type="image"
+                style="width: 18%; position: relative; z-index: 2; margin-top: 4%; margin-left: 19%;"
+                onclick="openNewQuest()">
+
+            <input src="../assets/images/topicImg/common/收集符文(按下前).png" type="image"
+                style="width: 20%; position: relative; z-index: 2; margin-left: 25%;" onclick="downloadrune()">
+        </div>
+    </div>
+
+    <div class="questDiv" id='quest1block'>
+        <div class="testDiv">
+            <img class="questbg" id="questBack1" src="../assets/images/topicImg/common/ARG-題目背景1920X1080.jpg" alt="" />
+            <div id="questgroup1">
+                <p class="queststring">隨著提示你來到的常常會經過，就在海豚廣場<br>旁邊的以諮商輔導服務為主的學生發展中心<br>
+                    <br><span>彩虹總在雨過天晴後屬於你是學發的彩虹</span><br><br>
+                    <span style="color: orange; font-size: 20pt;">橙</span>
+                    <span style="color: orange;font-size: 20pt;">橙</span>
+                    <span style="color:red;font-size: 20pt;">紅</span>
+                    <span style="color:blue;font-size: 20pt;">藍</span>
+                    <span style="color:green;font-size: 20pt;">綠</span>
+                    <span style="color:yellow;font-size: 20pt;">黃</span>
+                    <span style="color:yellow;font-size: 20pt;">黃</span><br><br>
+                    下一試煉：能量運用得當才能通過考驗
+                </p>
+                <img class="questAImg" src="../assets/images/topicImg/groupa/quest1.jpg">
+            </div>
             <img id="questrune1" />
         </div>
+
         <div class="inputBlock" id="inputBlock1">
-            <img class="background" id="background1" src="../assets/images/topicImg/common/純色背景.jpg" alt="">
+            <img class="background" id="background1" src="../assets/images/topicImg/common/符文專用的純色背景.jpg" alt="">
             <div class="inputDiv">
                 <img class="ansimg" src="../assets/images/topicImg/common/輸入答案_1.png" alt="">
                 <input class="quest" id="quest1">
                 <input class="send" type="image" src="../assets/images/topicImg/common/送出(按下前).png"
-                    onclick="clickAns('quest1')"
-                    onmouseover="this.src='../assets/images/topicImg/common/送出(按下後).png'" 
-                    onmouseout="this.src='../assets/images/topicImg/common/送出(按下前).png'" /> 
+                    onclick="clickAns('quest1')" onmouseover="this.src='../assets/images/topicImg/common/送出(按下後).png'"
+                    onmouseout="this.src='../assets/images/topicImg/common/送出(按下前).png'" />
             </div>
         </div>
-
     </div>
 
     <div class="questDiv" id='quest2block'>
-        <div>
-            <img id="questImg2" src="../assets/images/topicImg/groupa/quest1.jpg" alt="" />
+        <div class="testDiv">
+            <img class="questbg" id="questBack2" src="../assets/images/topicImg/common/ARG-題目背景1920X1080.jpg" alt="" />
+            <div id="questgroup2">
+                <p class="queststring">
+                    <span style="font-size: 30pt;"><span></span><br><br><br>T2+D*M</span>
+                </p>
+                <img class="questCImg" src="../assets/images/topicImg/groupa/quest2.JPG">
+            </div>
             <img id="questrune2" />
         </div>
+
         <div class="inputBlock" id="inputBlock2">
-            <img class="background" id="background2" src="../assets/images/topicImg/common/純色背景.jpg" alt="">
+            <img class="background" id="background2" src="../assets/images/topicImg/common/符文專用的純色背景.jpg" alt="">
             <div class="inputDiv">
                 <img class="ansimg" src="../assets/images/topicImg/common/輸入答案_1.png" alt="">
                 <input class="quest" id="quest2">
                 <input class="send" type="image" src="../assets/images/topicImg/common/送出(按下前).png"
-                    onclick="clickAns('quest2')"
-                    onmouseover="this.src='../assets/images/topicImg/common/送出(按下後).png'" 
-                    onmouseout="this.src='../assets/images/topicImg/common/送出(按下前).png'" /> 
+                    onclick="clickAns('quest2')" onmouseover="this.src='../assets/images/topicImg/common/送出(按下後).png'"
+                    onmouseout="this.src='../assets/images/topicImg/common/送出(按下前).png'" />
             </div>
         </div>
     </div>
 
     <div class="questDiv" id='quest3block'>
-        <div>
-            <img id="questImg3" src="../assets/images/topicImg/groupa/quest1.jpg" alt="" />
-            <img id="questrune3" />
-        </div>
-        <div class="inputBlock" id="inputBlock3">
-            <img class="background" id="background3" src="../assets/images/topicImg/common/純色背景.jpg" alt="">
-            <div class="inputDiv">
-                <img class="ansimg" src="../assets/images/topicImg/common/輸入答案_1.png" alt="">
-                <input class="quest" id="quest3">
-                <input class="send" type="image" src="../assets/images/topicImg/common/送出(按下前).png"
-                    onclick="clickAns('quest3')"
-                    onmouseover="this.src='../assets/images/topicImg/common/送出(按下後).png'"
-                    onmouseout="this.src='../assets/images/topicImg/common/送出(按下前).png'" /> 
+        <div class="testDiv">
+            <img class="questbg" id="questBack3" src="../assets/images/topicImg/common/ARG-題目背景1920X1080.jpg" alt="" />
+            <div id="questgroup3">
+                <p class="queststring">題目擺放區</p>
+                <img class="questBImg" src="../assets/images/topicImg/groupa/quest3-1.jpg">
             </div>
+            <img id="questrune3" />
         </div>
     </div>
 
     <script>
         let targetFolder = 'groupa'
         let loadJsonName = 'a.json';
+        function downloadrune() {
+            window.open("../assets/images/topicImg/common/團結.png")
+        }
+        function openNewQuest() {
+            let nextStage = document.getElementById("quest1block");
+            nextStage.style.display = "inline";
+        }
     </script>
     <script src="../assets/js/topic.js"></script>
 </body>

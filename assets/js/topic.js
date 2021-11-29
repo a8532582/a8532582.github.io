@@ -29,16 +29,18 @@ async function clickAns(target) {
     return ansCheck
 }
 
-async function getRuneMethod(ansCheck, questInput, questNum) {
-    let questImg = document.getElementById(`questImg${questNum}`);
+async function getRuneMethod(ansCheck, questInput, questNum=1) {
+    // let questBack = document.getElementById(`questBack${questNum}`);
     let questRune = document.getElementById(`questrune${questNum}`);
     let background = document.getElementById(`background${questNum}`);
     let inputBlock = document.getElementById(`inputBlock${questNum}`);
+    let questGroup = document.getElementById(`questgroup${questNum}`);
     let targetDiv = questInput.parentElement
     targetDiv.remove();
     if (ansCheck) {
-        questImg.src = "../assets/images/topicImg/common/ARG-題目背景1920X1080.jpg"
-        questImg.style.position = "absolute";
+        questGroup.remove();
+        // questBack.src = "../assets/images/topicImg/common/ARG-題目背景1920X1080.jpg"
+        // questBack.style.position = "absolute";
 
         questRune.src = `${targetUrl}/${questInput.id}-rune.png`
         questRune.style.width = "30%"
@@ -47,12 +49,13 @@ async function getRuneMethod(ansCheck, questInput, questNum) {
         questRune.style.paddingTop = "15%"
 
         background.src = "../assets/images/topicImg/common/符文專用的純色背景.jpg"
-        background.style.paddingTop = "4%"
+        // background.style.paddingTop = "4%"
+        background.style.marginTop = "4%";
         if (questNum < 3) {
             let nextButton = document.createElement("input");
             nextButton.src = "../assets/images/topicImg/common/下一題按鈕(按下前).png"
             nextButton.type = "image";
-            nextButton.style.width = "30%"
+            nextButton.style.width = "18%"
             nextButton.style.position = "relative"
             nextButton.style.zIndex = "2";
             nextButton.style.marginTop = "4%"
@@ -80,9 +83,10 @@ async function getRuneMethod(ansCheck, questInput, questNum) {
             downloadRune.onmouseout = function(){
                 downloadRune.src = "../assets/images/topicImg/common/收集符文(按下前).png"
             }
-            downloadRune.style.width = "34%"
+            downloadRune.style.width = "20%"
             downloadRune.style.position = "relative"
             downloadRune.style.zIndex = "2";
+            downloadRune.style.marginLeft = "25%"
             downloadRune.onclick = function () {
                 window.open(`${targetUrl}/${questInput.id}-rune.png`)
             }
@@ -99,11 +103,11 @@ async function getRuneMethod(ansCheck, questInput, questNum) {
             downloadRune.onmouseout = function(){
                 downloadRune.src = "../assets/images/topicImg/common/收集符文(按下前).png"
             }
-            downloadRune.style.width = "34%"
+            downloadRune.style.width = "20%"
             downloadRune.style.position = "relative"
             downloadRune.style.zIndex = "2";
             downloadRune.style.marginTop = "4%"
-            downloadRune.style.marginLeft = "32%"
+            downloadRune.style.marginLeft = "40%"
             downloadRune.onclick = function () {
                 window.open(`${targetUrl}/${questInput.id}-rune.png`)
             }
