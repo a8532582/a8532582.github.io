@@ -52,12 +52,12 @@
             <img class="background" id="startBackGround" src="../assets/images/topicImg/common/符文專用的純色背景.jpg" alt=""
                 style="padding-top: 4%;">
 
-            <input src="../assets/images/topicImg/common/下一題按鈕(按下前).png" type="image"
+            <input id="trialImg" src="../assets/images/topicImg/common/試煉開始(按下前).png" type="image"
                 style="width: 18%; position: relative; z-index: 2; margin-top: 4%; margin-left: 19%;"
-                onclick="openNewQuest()">
+                onclick="openNewQuest()" onmouseover="putTrialImg()" onmouseout="upTrialImg()">
 
             <input src="../assets/images/topicImg/common/收集符文(按下前).png" type="image"
-                style="width: 20%; position: relative; z-index: 2; margin-left: 25%;" onclick="downloadrune()">
+                style="width: 19%; position: relative; z-index: 2; margin-left: 25%;" onclick="downloadrune()">
         </div>
     </div>
 
@@ -112,7 +112,7 @@
             <img class="questbg" id="questBack2" src="../assets/images/topicImg/common/ARG-題目背景1920X1080.jpg" alt="" />
             <div id="questgroup2">
                 <p class="queststring">
-                    <span style="font-size: 10vmin;"><span></span><br><br><br>T2+D*M</span>
+                    <span style="font-size: 10vmin;"><span></span><br><br><br>√S+T2+D*M</span>
                 </p>
                 <img class="questCImg" src="../assets/images/topicImg/groupa/quest2.jpg">
             </div>
@@ -152,6 +152,15 @@
             let nextStage = document.getElementById("quest1block");
             nextStage.style.display = "inline";
         }
+        function putTrialImg() {
+            let trialElement = document.getElementById("trialImg");
+            trialElement.src = "../assets/images/topicImg/common/試煉開始(按下後).png"
+        }
+        function upTrialImg() {
+            let trialElement = document.getElementById("trialImg");
+            trialElement.src = "../assets/images/topicImg/common/試煉開始(按下前).png"
+        }
+
     </script>
     <script src="../assets/js/topic.js"></script>
 </body>
