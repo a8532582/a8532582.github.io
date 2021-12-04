@@ -57,10 +57,10 @@ body {
 }
 .questBImg{
     position: relative;
-    width: 20%;
-    margin-left: 54%;
+    width: 24%;
+    margin-left:23%;
+    float: left;
     padding-top: 16%;
-    margin-bottom: 10%;
 }
 .questAImg{
     position: relative;
